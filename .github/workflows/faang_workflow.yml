@@ -30,6 +30,11 @@ jobs:
         run: |
           pip install -r requirements.txt
 
+      - name: Fix line endings # Added this code as I ran into a Windows line endings issue
+        run: |
+          sudo apt-get install dos2unix
+          dos2unix faang.py
+
       - name: Run faang.py
         run: |
           chmod +x ./faang.py
