@@ -1,4 +1,6 @@
 numpy
 yfinance
 pandas
+pathlib
 matplotlib
+datetime
