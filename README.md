@@ -106,6 +106,7 @@ Computer Infrastructure Assessment:
 
 ### Problem 1: Data from yfinance
 In this problem I write the function `get_data()`, which downloads hourly data for the last five days for FAANG stocks (META, AAPL, AMZN, NFLX, GOOG). Data is saved in the `data/` folder as a timestamped CSV file.
+
 **References:**
   - yfinance documentation: https://ranaroussi.github.io/yfinance/
   - Investopedia: FAANG Stocks: https://www.investopedia.com/terms/f/faang-stocks.asp
@@ -116,17 +117,20 @@ In this problem I write the function `get_data()`, which downloads hourly data f
 
 ### Problem 2: Plotting Data
 In this problem I write the function `plot_data()`, which loads the latest CSV file from `data/` and plots the Close prices for all five stocks on one graph. Output is saved in the `plots/` folder as a timestamped PNG file.
+
 **References:**
   - Copilot: Help with writing plotting function: https://copilot.microsoft.com/shares/9EGGcjhzuPrid1sVUni2k
 
 ### Problem 3: Script
 In this problem, I created `faang.py`, an executable script containing both of the above functions. The script includes a shebang line and can be run with the command `./faang.py` - this will download the data and generate the plot automatically. 
+
 **References:**
   - Medium.com: A Deeper View into the Shebang: https://medium.com/@jcroyoaun/a-deeper-view-into-the-shebang-for-linux-scripting-4a26395df49d
   - ChatGPT: Writing a sanity check for faang.py: https://chatgpt.com/share/692ef5f0-bdf0-800c-8570-4d2775819ff9
   
 ### Problem 4: Automation
 In this section of the notebook, I explain my automation of the above process. A GitHub Actions workflow (`faang.yml`) is included in `.github/workflows/`. This workflow runs the script automatically every Saturday morning.
+
 **References:**
   - Copilot: Help with workflow automation code and explanations: https://copilot.microsoft.com/shares/ZT4wuksEYTXXx4yMrqVid
   - GitHub Actions demo workflow: https://docs.github.com/en/actions/get-started/quickstart
