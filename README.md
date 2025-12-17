@@ -22,6 +22,11 @@ by Zoe McNamara Harlowe
 - Required packages (listed in `requirements.txt`):  
   ```bash
   numpy
+  yfinance
+  pandas
+  pathlib
+  matplotlib
+  datetime
 
 ---
 
@@ -64,7 +69,12 @@ jupyter notebook problems.ipynb
 
 ## Libraries
 
-- Numpy: https://numpy.org/doc/2.2/
+- Numpy: https://numpy.org/doc/2.3/user/absolute_beginners.html
+- Yfinance: https://pypi.org/project/yfinance/
+- Pandas: https://pandas.pydata.org/docs/user_guide/index.html
+- Pathlib: https://docs.python.org/3/library/pathlib.html
+- Matplotlib.pyplot: https://matplotlib.org/3.5.3/api/_as_gen/matplotlib.pyplot.html
+- Datetime: https://docs.python.org/3/library/datetime.html
 
 --- 
 
@@ -72,9 +82,13 @@ jupyter notebook problems.ipynb
 
 Computer Infrastructure Assessment:
 - .gitignore
-- README.md            
+- README.md
+- faang.py – executable script for downloading and plotting FAANG data
+- .github/workflows/faang.yml – GitHub Actions workflow for automation
+- data/ – folder where CSV data files are saved
+- plots/ – folder where PNG plots are saved            
 - requirements.txt      
-- problems.ipynb:
+- problems.ipynb (notebook with explanations and solutions)
 
     [Imports](problems.ipynb#imports)
 
@@ -90,10 +104,22 @@ Computer Infrastructure Assessment:
 
 ## Problems
 
-- Problem 1: Data from yfinance
+### Problem 1: Data from yfinance
+In this problem I write the function `get_data()`, which downloads hourly data for the last five days for FAANG stocks (META, AAPL, AMZN, NFLX, GOOG). Data is saved in the `data/` folder as a timestamped CSV file.
+**References:**
+  -
 
-- Problem 2: Plotting Data
+### Problem 2: Plotting Data
+In this problem I write the function `plot_data()`, which loads the latest CSV file from `data/` and plots the Close prices for all five stocks on one graph. Output is saved in the `plots/` folder as a timestamped PNG file.
+**References:**
+  -
 
-- Problem 3: Script
+### Problem 3: Script
+In this problem, I created `faang.py`, an executable script containing both of the above functions. The script includes a shebang line and can be run with the command `./faang.py` - this will download the data and generate the plot automatically. 
+**References:**
+  -
 
-- Problem 4: Automation
+### Problem 4: Automation
+In this section of the notebook, I explain my automation of the above process. A GitHub Actions workflow (`faang.yml`) is included in `.github/workflows/`. This workflow runs the script automatically every Saturday morning.
+**References:**
+  - 

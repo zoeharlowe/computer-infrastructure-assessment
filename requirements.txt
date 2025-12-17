@@ -2,5 +2,5 @@ numpy
 yfinance
 pandas
 pathlib
-matplotlib
+matplotlib.pyplot
 datetime
