@@ -67,7 +67,7 @@ jupyter notebook problems.ipynb
 
 ---
 
-## Libraries
+## Libraries & Packages
 
 - Numpy: https://numpy.org/doc/2.3/user/absolute_beginners.html
 - Yfinance: https://ranaroussi.github.io/yfinance/
